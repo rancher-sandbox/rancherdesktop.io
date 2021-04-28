@@ -1,4 +1,4 @@
-baseURL = ""
+baseURL = "https://rancher-sandbox.github.io/rancherdesktop.io/"
 languageCode = "en-us"
 theme = "projects-theme"
 title = "Rancher Desktop"
