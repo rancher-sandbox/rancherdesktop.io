@@ -1,0 +1,15 @@
+baseURL = ""
+languageCode = "en-us"
+theme = "projects-theme"
+title = "Rancher Desktop"
+disableKinds = ["section", "taxonomy", "taxonomyTerm", "RSS", "sitemap", "robotsTXT", "404"]
+
+[menu]
+
+  [[menu.main]]
+    identifier = "docs"
+    name = "Docs"
+    url = "https://github.com/rancher-sandbox/rd/tree/main/docs"
+
+[params]
+  github = "https://github.com/rancher-sandbox/rd"

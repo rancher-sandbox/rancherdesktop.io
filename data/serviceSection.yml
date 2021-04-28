@@ -1,0 +1,34 @@
+---
+enable: true
+topTitle: Hypper features
+title: >
+  ## Why use Hypper?
+
+
+service:
+  - content: >
+      #### Configured in annotations
+
+      All the Hypper configs are done in chart annotations so
+      expanding existing charts is as easy as writing some extra lines.
+
+    image: images/annotations.svg
+
+  - content: >
+      #### Feel at home with Hypper
+
+      Hypper is fully compatible with Helm Charts so there is no need to
+      change them in any way, they will just work
+      out of the box with no changes.
+
+    image: images/house.svg
+
+  - content: >
+      #### Shared dependencies
+
+      Hypper is able to understand shared dependencies,
+      so you can share apps for different charts, making your infrastructure easier and simpler
+
+
+    image: images/shared-deps.svg
+
