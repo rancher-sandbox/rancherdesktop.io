@@ -9,7 +9,7 @@ disableKinds = ["section", "taxonomy", "taxonomyTerm", "RSS", "sitemap", "robots
   [[menu.main]]
     identifier = "docs"
     name = "Docs"
-    url = "https://github.com/rancher-sandbox/rd/tree/main/docs"
+    url = "https://github.com/rancher-sandbox/rancher-desktop/tree/main/docs"
 
 [params]
-  github = "https://github.com/rancher-sandbox/rd"
+  github = "https://github.com/rancher-sandbox/rancher-desktop"
