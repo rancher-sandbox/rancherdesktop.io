@@ -5,6 +5,10 @@ title = "Rancher Desktop"
 disableKinds = ["section", "taxonomy", "taxonomyTerm", "RSS", "sitemap", "robotsTXT", "404"]
 googleAnalytics = 'UA-56382716-10'
 
+[privacy]
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+
 [menu]
 
   [[menu.main]]
