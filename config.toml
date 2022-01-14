@@ -14,7 +14,7 @@ googleAnalytics = 'UA-56382716-10'
   [[menu.main]]
     identifier = "docs"
     name = "Docs"
-    url = "https://github.com/rancher-sandbox/rancher-desktop/tree/main/docs"
+    url = "https://docs.rancherdesktop.io"
 
 [params]
   github = "https://github.com/rancher-sandbox/rancher-desktop"
