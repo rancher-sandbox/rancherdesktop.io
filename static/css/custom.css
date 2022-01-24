@@ -2,3 +2,8 @@
     height: 30px;
     margin-top: -5px;
 }
+
+.nav-item img {
+    max-height: .8125rem;
+    padding-right: 10px;
+}
