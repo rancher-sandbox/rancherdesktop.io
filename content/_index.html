@@ -10,15 +10,49 @@ pagewidth: 12
 <section class="">
   <div class="container">
     <div class="row">
-      <div class="col-lg-6 mx-auto text-center pb-4">
+      <div class="col-lg-6 mx-auto text-center">
         <h2>Download Rancher Desktop</h2>
         <p class="lead">You can learn more in the <a href="https://docs.rancherdesktop.io/installation">installation instructions</a>.</p>
-        <a href="https://github.com/rancher-sandbox/rancher-desktop/releases/download/v{{< param version >}}/Rancher.Desktop-{{< param version >}}.aarch64.dmg" type="button" class="btn btn-outline-primary">Mac (Apple Silicon)</a>
-        <a href="https://github.com/rancher-sandbox/rancher-desktop/releases/download/v{{< param version >}}/Rancher.Desktop-{{< param version >}}.x86_64.dmg" type="button" class="btn btn-outline-primary">Mac (Intel)</a><br>
-        <a href="https://github.com/rancher-sandbox/rancher-desktop/releases/download/v{{< param version >}}/Rancher.Desktop.Setup.{{< param version >}}.exe" type="button" class="btn btn-outline-primary">Windows</a>
-        <a href="https://docs.rancherdesktop.io/installation#linux" type="button" class="btn btn-outline-primary">Linux</a>
       </div>
     </div>
+
+    <!-- -------- start download -------- -->
+    <section class="py-10">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-lg-3 col-md-6">
+            <div class="info">
+              <img src="/images/logo-apple.svg" height="50" alt="apple">
+              <p class="mt-4"><a href="https://github.com/rancher-sandbox/rancher-desktop/releases/download/v{{< param version >}}/Rancher.Desktop-{{< param version >}}.aarch64.dmg">Download Mac (Apple Silicon) <span class="material-icons">
+file_download</span></a></p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="info">
+              <img src="/images/logo-apple.svg" height="50" alt="apple">
+              <p class="mt-4"><a href="https://github.com/rancher-sandbox/rancher-desktop/releases/download/v{{< param version >}}/Rancher.Desktop-{{< param version >}}.x86_64.dmg">Download Mac (Intel) <span class="material-icons">
+file_download</span></a></p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="info">
+              <img src="/images/logo-windows.svg" height="50" alt="Windows">
+              <p class="mt-4"><a href="https://github.com/rancher-sandbox/rancher-desktop/releases/download/v{{< param version >}}/Rancher.Desktop.Setup.{{< param version >}}.exe">Download Windows <span class="material-icons">
+file_download</span></a></p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="info">
+              <img src="/images/logo-linux.svg" height="50" alt="linux">
+              <p class="mt-4"><a href="https://docs.rancherdesktop.io/installation#linux">Download Linux <span class="material-icons">
+file_download</span></a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- -------- end download -------- -->
+
     <h2 class="text-center">Why use Rancher Desktop?</h2>
     <div class="row">
       <div class="col-lg-4 col-md-6">
