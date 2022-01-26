@@ -1,16 +1,9 @@
-.navbar{
-    background: #fff;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    box-shadow: 0 10px 20px rgba(50,65,141,.1);
+.navbar-brand img {
+    height: 30px;
+    margin-top: -5px;
 }
 
-.btn-hypper {
-    color: #fff;
-    background-color: #d23306;
-    border-color: #d23306;
-}
-
-.hero#home{
-    padding-bottom: 0;  /* No need to have padding between home and sections */
+.nav-item img {
+    max-height: .8125rem;
+    padding-right: 10px;
 }

@@ -1,9 +1,13 @@
-baseURL = "https://rancher-sandbox.github.io/rancherdesktop.io/"
+baseURL = "rancherdesktop.io/"
 languageCode = "en-us"
-theme = "projects-theme"
+theme = "hugo-material"
 title = "Rancher Desktop"
 disableKinds = ["section", "taxonomy", "taxonomyTerm", "RSS", "sitemap", "robotsTXT", "404"]
 googleAnalytics = 'UA-56382716-10'
+
+[params]
+  custom_css = ["custom.css"]
+  version = "1.0.0"
 
 [privacy]
   [privacy.googleAnalytics]
@@ -12,9 +16,22 @@ googleAnalytics = 'UA-56382716-10'
 [menu]
 
   [[menu.main]]
+    pre = "<i class='material-icons'>menu_book</i>"
     identifier = "docs"
     name = "Docs"
     url = "https://docs.rancherdesktop.io"
+  [[menu.main]]
+    pre = "<i class='fa fa-github'></i>"
+    identifier = "github"
+    name = "GitHub"
+    url = "https://github.com/rancher-sandbox/rancher-desktop/"
 
-[params]
-  github = "https://github.com/rancher-sandbox/rancher-desktop"
+  # Foother Menu
+  [[menu.footer]]
+    identifier = "docs"
+    name = "Docs"
+    url = "https://docs.rancherdesktop.io"
+  [[menu.footer]]
+    identifier = "github"
+    name = "GitHub"
+    url = "https://github.com/rancher-sandbox/rancher-desktop/"

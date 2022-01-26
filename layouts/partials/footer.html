@@ -1,25 +1,37 @@
-<footer>
-	<p>&copy; {{ now.Year }} SUSE. {{ .Site.Title }} is an open source project of the <a href="https://suse.com">SUSE</a> <a href="https://rancher.com">Rancher</a> Engineering group.</p>
-	<div class="project-icons">
-		<a href="https://k3s.io" target="blank">
-			<img src="images/icon-k3s.svg" height="20">
-		</a>
-		<a href="https://harvesterhci.io" target="blank">
-			<img src="images/icon-harvester.svg" height="20">
-		</a>
-		<!-- <a href="https://rancherdesktop.io" target="blank">
-			<img src="images/icon-rancher-desktop.svg" height="20">
-		</a> -->
-		<a href="https://epinio.io" target="blank">
-			<img src="images/icon-epinio.svg" height="20">
-		</a>
-		<a href="https://kubewarden.io" target="blank">
-			<img src="images/icon-kubewarden.svg" height="20">
-		</a>
-		<a href="https://hypper.io" target="blank">
-			<img src="images/icon-hypper.svg" height="20">
-		</a>
-	</div>
-</footer>
+<footer class="footer">
+  <div class="container">
+	  <nav class="pull-left">
+	    <ul>
+	    {{ range .Site.Menus.footer }}
+        {{ if .HasChildren }}
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            {{ .Name }}
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            {{ range .Children }}
+            <li class="nav-item">
+              <a href="{{ .URL | relLangURL }}"{{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}>
+                {{ .Pre }}
+                <span>{{ .Name }}</span>
+              </a>
+            </li>
+            {{end}}
+          </ul>
+        </li>
 
-{{ template "_internal/google_analytics.html" . }}
+        {{ else }}
+
+        <li>
+          <a href="{{ .URL | relURL }}">{{ .Pre }} {{ .Name }}</a>
+        </li>
+        {{ end }}
+      {{ end }}
+      </ul>
+    </nav>
+	  <div class="copyright pull-right">
+	    © 2022 SUSE. Rancher Desktop is an open source project of the <a href="https://suse.com/">SUSE</a> <a href="https://rancher.com/">Rancher</a> Engineering group.
+	  </div>
+  </div>
+</footer>

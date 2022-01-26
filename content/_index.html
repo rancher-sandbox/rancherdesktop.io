@@ -1,84 +1,180 @@
 ---
-title: "Rancher Desktop: Kubernetes and container management on the desktop"
-date: 2021-04-16T13:28:46+02:00
+title: "Kubernetes and Container Management on the Desktop"
+subtitle: "An open-source desktop application for Mac, Windows and Linux."
+description: Rancher Desktop runs Kubernetes and container management on your desktop. You can choose the version of Kubernetes you want to run. You can build, push, pull, and run container images using either containerd or Moby (dockerd). The container images you build can be run by Kubernetes immediately without the need for a registry.
+class: "landing-page"
+pagewidth: 12
 ---
-<section class="intro">
-  <div class="bg-primary">
-    <div class="wrap grid-two">
-      <div>
-        <h1>Kubernetes and container management on the desktop</h1>
-        <a class="btn" href="https://github.com/rancher-sandbox/rd/releases">Install Rancher Desktop</a>
-      </div>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/P3fDwDMfvyE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-  </div>
 
-  <div class="folder">
-    <h4>Great For</h4>
-    <div class="bg-light grid-dynamic text-center">
-      <h5>Building, running, pushing, and pulling containers</h5>
-      <h5>Running your choice of Kubernetes versions</h5>
-      <h5>Local application development in Kubernetes</h5>
-    </div>
-  </div>
-</section>
-
-<section class="wrap">
-  <h2>What is Rancher Desktop?</h2>
-  <p class="text-center font-weight-light">Rancher Desktop is an open-source desktop application for Mac, Windows and Linux. It provides Kubernetes and container management.
-    You can choose the version of Kubernetes you want to run. You can build, push, pull, and <i>run</i> container images using either containerd or Moby (dockerd).
-    The container images you build can be run by Kubernetes immediately without the need for a registry.
-  </p>
-
-</section>
-<hr />
-<section class="wrap">
-
-  <h2>Why Rancher Desktop?</h2>
-  <div class="grid-three">
-    <div>
-      <h3>Kubernetes Made Simple</h3>
-      <p class="font-weight-light">Getting started with Kubernetes on your desktop can be a project. Especially if you want to match the version of Kubernetes you run locally to the one you run in production. Rancher Desktop makes it as easy as setting a preference.</p>
-    </div>
-
-    <div>
-      <h3>Built On Proven Projects</h3>
-      <p class="font-weight-light">Rancher Desktop leverages proven projects to do the dirty work. That includes Moby, containerd, k3s, kubectl, and more. These projects have demonstrated themselves as trustworthy and provide a foundation you can trust.</p>
-    </div>
-
-    <div>
-      <h3>Coupled Container Management</h3>
-      <p class="font-weight-light">Container management to build, push, and pull images and run containers. It uses the same container runtime as Kubernetes. Built images are immediately available to use in your local workloads without any pushing, pulling, or copying.</p>
-    </div>
-  </div>
-</section>
-<hr />
-<section class="wrap">
-  <h2>How it Works</h2>
-  <p class="font-weight-light">Rancher Desktop is an electron based application that wraps other tools while itself providing the user experience to create a simple experience.
-    On MacOS and Linux, Rancher Desktop leverages a virtual machine to run containerd or dockerd and Kubernetes. Windows Subsystem for Linux v2 is leveraged for Windows systems.
-    All you need to do is download and run the application.
-  </p>
-  <img src="images/Arch_v4.svg" alt="Racher Desktop Architecture">
-</section>
-
-<section class="get-started">
-  <div class="white">
-    <h2 class="text-center">Get Started</h2>
-    <div class="grid-two">
-      <div>
-        <h3>1. Download Rancher Desktop</h3>
-        <p style="margin-bottom: 40px;"><a class="btn" href="https://github.com/rancher-sandbox/rd/releases">Download Rancher Desktop</a></p>
-      </div>
-      <div>
-        <h3>2. Run The App</h3>
-        <p>Run the app you downloaded and it will take care of the rest.</p>
+<!-- -------- START Features w/ title and 3 infos -------- -->
+<section class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 mx-auto text-center">
+        <h2>Download Rancher Desktop</h2>
+        <p class="lead">You can learn more in the <a href="https://docs.rancherdesktop.io/installation">installation instructions</a>.</p>
       </div>
     </div>
-    
-  </div>
-  <div class="bg-primary">
-    <div class="wrap">
+
+    <!-- -------- start download -------- -->
+    <section class="py-10">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-lg-3 col-md-6">
+            <div class="info">
+              <img src="/images/logo-apple.svg" height="50" alt="apple">
+              <p class="mt-4"><a href="https://github.com/rancher-sandbox/rancher-desktop/releases/download/v{{< param version >}}/Rancher.Desktop-{{< param version >}}.aarch64.dmg">Download Mac (Apple Silicon) <span class="material-icons">
+file_download</span></a></p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="info">
+              <img src="/images/logo-apple.svg" height="50" alt="apple">
+              <p class="mt-4"><a href="https://github.com/rancher-sandbox/rancher-desktop/releases/download/v{{< param version >}}/Rancher.Desktop-{{< param version >}}.x86_64.dmg">Download Mac (Intel) <span class="material-icons">
+file_download</span></a></p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="info">
+              <img src="/images/logo-windows.svg" height="50" alt="Windows">
+              <p class="mt-4"><a href="https://github.com/rancher-sandbox/rancher-desktop/releases/download/v{{< param version >}}/Rancher.Desktop.Setup.{{< param version >}}.exe">Download Windows <span class="material-icons">
+file_download</span></a></p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="info">
+              <img src="/images/logo-linux.svg" height="50" alt="linux">
+              <p class="mt-4"><a href="https://docs.rancherdesktop.io/installation#linux">Install on Linux <span class="material-icons">
+file_download</span></a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- -------- end download -------- -->
+
+    <h2 class="text-center">Why use Rancher Desktop?</h2>
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <div class="p-3 text-center">
+          <h3 class="mt-4">Container Management</h3>
+          <p>Container management to build, push, and pull images and run containers. It uses the same container runtime as Kubernetes. Built images are immediately available to use in your local workloads without any pushing, pulling, or copying.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="p-3 text-center">
+          <h3 class="mt-4">Kubernetes Made Simple</h3>
+          <p>Getting started with Kubernetes on your desktop can be a project. Especially if you want to match the version of Kubernetes you run locally to the one you run in production. Rancher Desktop makes it as easy as setting a preference.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mx-md-auto">
+        <div class="p-3 text-center">
+          <h3 class="mt-4">Built On Proven Projects</h3>
+          <p>Rancher Desktop leverages proven projects to do the dirty work. That includes Moby, containerd, k3s, kubectl, and more. These projects have demonstrated themselves as trustworthy and provide a foundation you can trust.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+<!-- -------- END Features w/ title and 3 infos -------- -->
+
+<section class="">
+  <div class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-md-0 mb-4">
+        <h3>Simple Kubernetes Configuration</h3>
+        <p class="lead mb-4">
+          Though a simple user interface you can configure how Kubernetes works. That includes:
+        </p>
+        <ul>
+          <li>Setting the version of Kubernetes you want to use</li>
+          <li>Choosing your container runtime</li>
+          <li>Configuring the system resources for the virtual machine (on Mac and Linux)</li>
+          <li>Resetting Kubernetes or Kubernetes and the container runtime to default with the push of a button</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <div class="blur-shadow-image text-center">
+          <img src="/images/kubernetes-settings.png" alt="Rancher Desktop Kubernetes settings screen" class="img-fluid shadow-xl border-radius-lg max-height-500">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="">
+  <div class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-md-0 mb-4">
+        <h3>Port Forwarding</h3>
+        <p class="lead mb-md-5 mb-4">
+          Port forward your Kubernetes services with the click of a button. Available on Windows with Mac and Linux supporting coming soon.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <div class="blur-shadow-image text-center">
+          <img src="/images/port-forward.png" alt="Rancher Desktop port forwarding menu" class="img-fluid shadow-xl border-radius-lg max-height-500">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="">
+  <div class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-md-0 mb-4">
+        <h3>Build and Run Containers</h3>
+        <p class="lead mb-md-5 mb-4">
+          Using with <i>nerdctl</i> or the <i>Docker</i> CLI you can build, run, and otherwise work with images and containers.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <div class="blur-shadow-image text-center">
+          <img src="/images/terminal.gif" alt="Terminal showing docker commands with Rancher Desktop" class="img-fluid shadow-xl border-radius-lg max-height-500">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- -------- START how it works -------- -->
+<section class="">
+  <div class="container py-5">
+    <h2>How it works</h2>
+    <img src="/images/how-it-works-rancher-desktop.svg" alt="img-shadow" class="img-fluid">
+    <p>Rancher Desktop is an electron based application that wraps other tools while itself providing the user experience to create a simple experience.
+      On MacOS and Linux, Rancher Desktop leverages a virtual machine to run containerd or dockerd and Kubernetes. Windows Subsystem for Linux v2 is leveraged for Windows systems.
+      All you need to do is download and run the application.</p>
+  </div>
+</section>
+<!-- -------- END how it works -------- -->
+
+<!-- -------- START CTA -------- -->
+<section class="py-5">
+  <div class="container">
+    <div class="row justify-space-between py-2">
+      <div class="col-6 mx-auto">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">How To Get Involved</h5>
+            <p class="card-text">Rancher Desktop is an open source project hosted on GitHub. Bugs and features are tracked through issues and new code is reviewed through pull requests.</p>
+            <a href="https://github.com/rancher-sandbox/rancher-desktop/issues" class="btn btn-primary">Issues</a>
+            <a href="https://github.com/rancher-sandbox/rancher-desktop/pulls" class="btn btn-primary">Pull Requests</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 mx-auto">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">How To Get Support</h5>
+            <p class="card-text">Found an issue or have a problem? Community support happens in the #rancher-desktop channel in Slack and in the issue queus, where you can search and file new issues.</p>
+            <a href="https://slack.rancher.io/" class="btn btn-primary">Rancher Users Slack</a>
+            <a href="https://github.com/rancher-sandbox/rancher-desktop/issues" class="btn btn-primary">Issues</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- -------- END CTA -------- -->
