@@ -1,4 +1,3 @@
-baseURL = "rancherdesktop.io/"
 languageCode = "en-us"
 theme = "hugo-material"
 title = "Rancher Desktop"
