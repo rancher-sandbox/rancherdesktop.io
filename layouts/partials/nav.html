@@ -16,7 +16,7 @@
           {{ range .Site.Menus.main }}
           <li class="nav-item">
             <a class="nav-link"
-               href="{{ .URL | relURL }}"
+               href="{{ .URL }}"
                {{ if $.IsHome }}data-target="{{ .URL }}"{{ end }} 
                title = "{{ .Name }}">{{ .Pre }} {{ .Name }}</a>
           </li>
