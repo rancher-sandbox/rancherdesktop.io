@@ -5,6 +5,10 @@ title = "Rancher Desktop"
 disableKinds = ["section", "taxonomy", "taxonomyTerm", "RSS", "sitemap", "robotsTXT", "404"]
 googleAnalytics = 'UA-56382716-10'
 
+[params]
+  custom_css = ["custom.css"]
+  version = "1.0.0"
+
 [privacy]
   [privacy.googleAnalytics]
     anonymizeIP = true
@@ -31,7 +35,3 @@ googleAnalytics = 'UA-56382716-10'
     identifier = "github"
     name = "GitHub"
     url = "https://github.com/rancher-sandbox/rancher-desktop/"
-
-[params]
-  custom_css = ["custom.css"]
-  version = "0.7.1"
