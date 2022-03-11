@@ -12,7 +12,15 @@ inheritance.
 .navbar.navbar-transparent .navbar-brand,
 .navbar.navbar-transparent .navbar-nav .nav-item .nav-link
 {
-    color: #ffffff;
+    color: rgb(85, 85, 85);
+}
+
+@media (min-width: 992px) {
+    .navbar.navbar-transparent .navbar-brand,
+    .navbar.navbar-transparent .navbar-nav .nav-item .nav-link
+    {
+        color: #ffffff;
+    }
 }
 
 .navbar .navbar-brand,
