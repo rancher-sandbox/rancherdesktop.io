@@ -24,3 +24,14 @@ inheritance.
     max-height: .8125rem;
     padding-right: 10px;
 }
+
+.demo-video {
+    margin-top: 20px;
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .demo-video {
+      display: block;
+    }
+  }
