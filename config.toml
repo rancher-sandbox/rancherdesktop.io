@@ -6,7 +6,7 @@ googleAnalytics = 'UA-56382716-10'
 
 [params]
   custom_css = ["custom.css"]
-  version = "1.4.1"
+  version = "1.5.0"
 
 [privacy]
   [privacy.googleAnalytics]
