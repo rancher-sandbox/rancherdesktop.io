@@ -5,6 +5,8 @@
 
   {{ with .Site.Params.name }}<meta name="author" content="{{ . }}">{{ end }}
   {{ with .Site.Params.role }}<meta name="description" content="{{ . }}">{{ end }}
+  
+  {{ partial "head-additions.html" . }}
 
   <title>{{ .Site.Title }}</title>
 
