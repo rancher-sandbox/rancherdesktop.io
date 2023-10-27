@@ -1,4 +1,3 @@
-import React  from 'react'
 import { motionListItems } from '@/assets/animations'
 import { VideoBox } from '@/components/VideoBox'
 import { motion } from 'framer-motion'
@@ -21,14 +20,18 @@ export default function Home() {
         <div className='dark:bg-customDark bg-gray-100 relative'>
           <div className='grid grid-row-2 content-center align-middle gap-14 md:grid-cols-2 mx-auto w-5/6 2xl:w-4/6 py-20'>
             <motion.div initial='hidden' animate='visible' variants={motionListItems} className='self-center'>
-              <p className='text-3xl font-thin text-left text-secondary-dark dark:text-primary flex items-center'>
+              <p className='text-3xl font-thin text-left flex items-center'>
                 <img src='/images/icon-rancher-desktop.svg' alt='Rancher Desktop Icon' className='h-12 w-12 mr-4' />
                 Rancher Desktop by SUSE
               </p>
               <br/>
-              <p className='text-4xl mt-4'>
+              <p className='text-4xl mt-4 font-thick text-left text-secondary-dark dark:text-primary flex items-center'>
                 Container Management and Kubernetes on the Desktop
               </p>
+              <p className='mt-4'>
+                An open-source application that provides all the essentials to work with containers and Kubernetes on the desktop
+              </p>
+              <br/>
               <br/>
               <DownloadButtons />
             </motion.div>
@@ -41,18 +44,18 @@ export default function Home() {
 
         {/** 👀 About section */}
         <div className='grid gap-6 mx-auto w-5/6 2xl:w-4/6'>
-          <p className='text-3xl my-4 text-left text-secondary-dark dark:text-primary'>Why use Rancher Desktop?</p>
-          <div className='grid grid-flow-row md:grid-cols-3 gap-14 mb-10'>
+{/*             <p className='text-3xl text-left text-secondary-dark dark:text-primary'>Why use Rancher Desktop?</p>
+ */}            <div className='grid grid-flow-row md:grid-cols-3 gap-14 mb-10'>
             <div>
-              <h2 className='text-secondary-dark dark:text-primary font-light text-lg'>Simple Installation</h2>
-              <p className='text-bold my-4 text-sm'>Simple installation for macOS, Windows & Linux</p>
+              <h2 className='text-secondary-dark dark:text-primary font-thick text-lg'>Simple Installation</h2>
+              <p className='text-bold my-4 text-sm'>Simple installation for macOS, Windows, and Linux</p>
               <motion.p className='grid grid-flow-row gap-4 text-sm font-thin' initial='hidden' animate='visible' variants={motionListItems}>
-               macOS and Windows users can simply download the respective installer and install. Linux users can install via popular package managers. Optional auto upgrade feature to automatically download and install new versions.
+               macOS and Windows users can simply download and run the respective installer. Linux users can install via popular package managers. Optional auto upgrade feature to automatically download and install new versions.
               </motion.p>
             </div>
 
             <div>
-              <h2 className='text-secondary-dark dark:text-primary font-light text-lg'>Configuration options</h2>
+              <h2 className='text-secondary-dark dark:text-primary font-thick text-lg'>Configuration options</h2>
               <p className='text-bold my-4 text-sm'>Use with the default configuration or customize to fit your needs.</p>
               <motion.p className='grid grid-flow-row gap-4 text-sm font-thin' initial='hidden' animate='visible' variants={motionListItems}>
                 Ability to choose container engine, Kubernetes version, enable/disable application features. Options to configure networking settings, control access to container repositories, registries and more.
@@ -60,7 +63,7 @@ export default function Home() {
             </div>
 
             <div>
-              <h2 className='text-secondary-dark dark:text-primary font-light text-lg'>Intuitive Graphical User Interface</h2>
+              <h2 className='text-secondary-dark dark:text-primary font-thick text-lg'>Intuitive Graphical User Interface</h2>
               <p className='text-bold my-4 text-sm'>User friendly GUI features, Dashboards</p>
               <motion.p className='grid grid-flow-row gap-4 text-sm font-thin' initial='hidden' animate='visible' variants={motionListItems}>
                 Well thought through GUI features to manage images, containers, application configuration and more. Full blown cluster dashboard that helps you explore and manage local Kubernetes resources.
@@ -68,7 +71,7 @@ export default function Home() {
             </div>
 
             <div>
-              <h2 className='text-secondary-dark dark:text-primary font-light text-lg'>Container Toolchain</h2>
+              <h2 className='text-secondary-dark dark:text-primary font-thick text-lg'>Container Toolchain</h2>
               <p className='text-bold my-4 text-sm'>Build, Pull, Push, Scan images. Run Containers.</p>
               <motion.p className='grid grid-flow-row gap-4 text-sm font-thin' initial='hidden' animate='visible' variants={motionListItems}>
                 CLI and GUI based features to support day to day tasks in container based development workflows. Integrates well with popular IDEs, other tools in the cloud native ecosystem.
@@ -76,7 +79,7 @@ export default function Home() {
             </div>
 
             <div>
-              <h2 className='text-secondary-dark dark:text-primary font-light text-lg'>Seamless Kubernetes upgrades</h2>
+              <h2 className='text-secondary-dark dark:text-primary font-thick text-lg'>Seamless Kubernetes upgrades</h2>
               <p className='text-bold my-4 text-sm'>Easily test the impact of Kubernetes upgrades on your workloads</p>
               <motion.p className='grid grid-flow-row gap-4 text-sm font-thin' initial='hidden' animate='visible' variants={motionListItems}>
                 Provides options to seamlessly apply Kubernetes upgrades to your  workloads so that you can detect any problems before they impact production environments.
@@ -84,10 +87,10 @@ export default function Home() {
             </div>
 
             <div>
-              <h2 className='text-secondary-dark dark:text-primary font-light text-lg'>Bundled utilities</h2>
+              <h2 className='text-secondary-dark dark:text-primary font-thick text-lg'>Bundled utilities</h2>
               <p className='text-bold my-4 text-sm'>Popular tools out of the box.</p>
               <motion.p className='grid grid-flow-row gap-4 text-sm font-thin' initial='hidden' animate='visible' variants={motionListItems}>
-                Includes most recent versions of popular open source CLI tools such as docker, nerdctl, helm, trivy, and more, eliminating the need for you to obtain and manage these tools separately.
+                Includes most recent versions of popular open source CLI tools such as docker, nerdctl, kubectl, helm, and more, eliminating the need for you to obtain and manage these tools separately.
               </motion.p>
             </div>
           </div>

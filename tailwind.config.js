@@ -8,8 +8,8 @@ module.exports = {
     extend: {
       colors: {
         // Configure your color palette here
-        primary: '#4e99d5',
-        'primary-light': '#66a7db',
+        primary: '#2bb067',
+        'primary-light': '#2bb067',
 
         'secondary-dark': '#0C0D0D',
         'secondary-light': '#30BA78',
