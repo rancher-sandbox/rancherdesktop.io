@@ -8,6 +8,14 @@ import Head from 'next/head'
 export default function Home() {
   return (
     <>
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-57KS2MW"
+          height="0"
+          width="0"
+          style={{ display: 'none', visibility: 'hidden' }}
+        ></iframe>
+      </noscript>
       <Head>
         <title>Rancher Desktop by SUSE</title>
         <meta name='description' content='Open source desktop application that provides Kubernetes, Container Management, bundled utilities on the desktop' />
@@ -118,7 +126,7 @@ export default function Home() {
             </motion.div>
 
             <div className="col-span-1">
-              <img src="/images/macOS_application_tabBehavior.png" alt="Rancher Desktop Kubernetes settings screen" className="img-fluid shadow-xl border-radius-lg max-height-500"/>
+              <img src="https://suse-rancher-media.s3.us-east-1.amazonaws.com/desktop/v1.11/preferences/macOS_application_tabBehavior.png" alt="Rancher Desktop Kubernetes settings screen" className="img-fluid shadow-xl border-radius-lg max-height-500"/>
             </div>
           </div>
 
@@ -131,7 +139,7 @@ export default function Home() {
             </motion.div>
 
             <div className="col-span-1">
-              <img src="/images/port-forward.png" alt="Rancher Desktop port forwarding menu" className="img-fluid shadow-xl border-radius-lg max-height-500"/>
+              <img src="https://suse-rancher-media.s3.us-east-1.amazonaws.com/desktop/v1.11/ui-main/Windows_PortForwarding.png" alt="Rancher Desktop port forwarding menu" className="img-fluid shadow-xl border-radius-lg max-height-500"/>
             </div>
           </div>
 
