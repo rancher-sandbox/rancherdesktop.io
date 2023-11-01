@@ -2,7 +2,7 @@ import React,{ useEffect, useState } from 'react'
 import axios from 'axios'
 
 export const DownloadButtons = () => {
-    // Use 1.10.0 as the fallback version in case something goes wrong fetching the latest release tag name 
+    // Use 1.10.0 as the fallback version in case something goes wrong fetching the latest release tag name
     const [latestRelease, setLatestRelease] = useState('1.10.0');
     const owner = 'rancher-sandbox';
     const repo = 'rancher-desktop';
@@ -11,7 +11,7 @@ export const DownloadButtons = () => {
         axios.get(`https://api.github.com/repos/${owner}/${repo}/releases/latest`)
           .then(response => {
             const { data } = response;
-            const releaseName = data.tag_name.slice(1); 
+            const releaseName = data.tag_name.slice(1);
             setLatestRelease(releaseName);
           })
           .catch(error => {
