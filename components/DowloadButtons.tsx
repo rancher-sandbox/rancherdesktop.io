@@ -3,7 +3,7 @@ import axios from 'axios'
 
 export const DownloadButtons = () => {
     // Use 1.10.0 as the fallback version in case something goes wrong fetching the latest release tag name 
-    const [latestRelease, setLatestRelease] = useState('1.10.0');
+    const [latestRelease, setLatestRelease] = useState('1.11.0');
     const owner = 'rancher-sandbox';
     const repo = 'rancher-desktop';
 
