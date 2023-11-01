@@ -1,8 +1,0 @@
----
-topTitle: An opinionated Chart manager
-content: >
-  ## Hypper
-
-  Hypper provides package management that targets cluster operators while building on the foundation laid by Helm and charts.
-
-image: images/kubernetes.png
