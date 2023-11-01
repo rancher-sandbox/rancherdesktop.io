@@ -6,7 +6,7 @@ googleAnalytics = 'UA-56382716-10'
 
 [params]
   custom_css = ["custom.css"]
-  version = "1.10.0"
+  version = "1.11.0"
   googleTagManager = "GTM-57KS2MW"
 
 [privacy]
