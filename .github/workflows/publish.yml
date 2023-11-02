@@ -20,7 +20,7 @@ jobs:
           # Extract custom domain from your repository settings
           CUSTOM_DOMAIN=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             "https://api.github.com/repos/${{ github.repository }}/pages" | jq -r '.cname')
-          if [[ -n $CUSTOM_DOMAIN ]]; then
+          if [ -n "$CUSTOM_DOMAIN" ] && [ "$CUSTOM_DOMAIN" != "null" ]; then
             echo "NEXT_PUBLIC_CUSTOM_DOMAIN=$CUSTOM_DOMAIN" >> $GITHUB_ENV
           fi
       - name: Install packages
