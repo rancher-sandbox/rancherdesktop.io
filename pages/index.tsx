@@ -3,6 +3,7 @@ import { VideoBox } from '@/components/VideoBox'
 import { motion } from 'framer-motion'
 import { DownloadButtons } from '@/components/DowloadButtons'
 import Head from 'next/head'
+import { PREFIX } from '@/utils/constants'
 
 
 export default function Home() {
@@ -29,7 +30,7 @@ export default function Home() {
           <div className='grid grid-row-2 content-center align-middle gap-14 md:grid-cols-2 mx-auto w-5/6 2xl:w-4/6 py-20'>
             <motion.div initial='hidden' animate='visible' variants={motionListItems} className='self-center'>
               <p className='text-3xl font-thin text-left flex items-center'>
-                <img src='/images/icon-rancher-desktop.svg' alt='Rancher Desktop Icon' className='h-12 w-12 mr-4' />
+                <img src={`${PREFIX}/images/icon-rancher-desktop.svg`} alt='Rancher Desktop Icon' className='h-12 w-12 mr-4' />
                 Rancher Desktop by SUSE
               </p>
               <br/>
@@ -152,13 +153,13 @@ export default function Home() {
             </motion.div>
 
             <div className="col-span-1">
-              <img src="/images/terminal.gif" alt="Terminal showing docker commands with Rancher Desktop" className="img-fluid shadow-xl border-radius-lg max-height-500"/>
+              <img src={`${PREFIX}/images/terminal.gif`} alt="Terminal showing docker commands with Rancher Desktop" className="img-fluid shadow-xl border-radius-lg max-height-500"/>
             </div>
           </div>
 
           <div className='grid grid-row-2 content-center align-middle md:grid-cols-1 mx-auto w-5/6 2xl:w-4/6 py-10'>
             <p className='text-3xl my-8 text-left text-secondary-dark dark:text-primary'>How it works?</p>
-            <img src="/images/how-it-works-rancher-desktop.svg" alt="img-shadow" className="w-full mx-auto" />
+            <img src={`${PREFIX}/images/how-it-works-rancher-desktop.svg`} alt="img-shadow" className="w-full mx-auto" />
             <br/>
             <p className="text-gray-700 dark:text-gray-300">
               Rancher Desktop is an Electron-based application that wraps other tools while providing a simple user experience. On macOS and Linux, Rancher Desktop uses a virtual machine to run containerd or Docker and Kubernetes. For Windows systems, it leverages Windows Subsystem for Linux v2. To get started, simply download and run the application.
