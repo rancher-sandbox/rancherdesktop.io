@@ -21,7 +21,7 @@ export default function Home() {
         <title>Rancher Desktop by SUSE</title>
         <meta name='description' content='Open source desktop application that provides Kubernetes, Container Management, bundled utilities on the desktop' />
         {/** 👀 Replace with your custom favicon.ico */}
-        <link rel='icon' href='/favicon.ico' />
+        <link rel='icon' href={`${PREFIX}/favicon.ico`} />
       </Head>
 
       <main className='grid grid-flow-row gap-8 text-sm'>
