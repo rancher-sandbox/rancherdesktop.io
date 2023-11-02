@@ -1,29 +1,55 @@
-name: github pages
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - main 
+    branches: [main]
+
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v3
         with:
-          submodules: true  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+          node-version: 16.x
+      - name: Set Custom Domain Environment Variable
+        run: |
+          # Extract custom domain from your repository settings
+          CUSTOM_DOMAIN=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/${{ github.repository }}/pages" | jq -r '.cname')
+          if [ -n "$CUSTOM_DOMAIN" ] && [ "$CUSTOM_DOMAIN" != "null" ]; then
+            echo "NEXT_PUBLIC_CUSTOM_DOMAIN=$CUSTOM_DOMAIN" >> $GITHUB_ENV
+          fi
+      - name: Install packages
+        run: npm ci
+      - name: Build project
+        run: npm run build
+      - name: Export static files
+        run: npm run export
+      - name: Add .nojekyll file
+        run: touch ./out/.nojekyll
+      - name: Create CNAME File
+        run: |
+          # Check if NEXT_PUBLIC_CUSTOM_DOMAIN environment variable is set
+          if [[ -n $NEXT_PUBLIC_CUSTOM_DOMAIN ]]; then
+            echo "$NEXT_PUBLIC_CUSTOM_DOMAIN" > ./out/CNAME
+          fi
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
         with:
-          hugo-version: 'latest'
-          extended: true
-
-      - name: Build
-        run: hugo --minify
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          path: ./out
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v2
