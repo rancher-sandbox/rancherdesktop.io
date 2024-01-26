@@ -1,8 +1,7 @@
 import { RancherLogoSVG } from '@/assets/images'
-import EpinioLogo from '@/assets/products-logos/icon-epinio.svg'
+import ElementalLogo from '@/assets/products-logos/icon-elemental.png'
 import HarvesterLogo from '@/assets/products-logos/icon-harvester.svg'
 import FleetLogo from '@/assets/products-logos/icon-fleet.svg'
-import OpniLogo from '@/assets/products-logos/icon-opni.svg'
 import useStore, { ThemeI } from '@/store/main.store'
 import { useEffect } from 'react'
 import { DocAndGitLinks } from '../DocAndGitLinks'
@@ -52,9 +51,9 @@ export const Header = () => {
 
               <hr className='mt-2 mb-2 border-gray-400 border-opacity-20' />
 
-              <a rel='nofollow noreferrer' href='https://epinio.io/' target='_blank' className='flex py-2 gap-2 hover:ml-2 transition-all'>
-                <img width={16} height={16} src={EpinioLogo.src} alt='' />
-                Epinio
+              <a rel='nofollow noreferrer' href='https://elemental.docs.rancher.com/' target='_blank' className='flex py-2 gap-2 hover:ml-2 transition-all'>
+                <img width={16} height={16} src={ElementalLogo.src} alt='' />
+                Elemental
               </a>
               <a rel='nofollow noreferrer' href='https://fleet.rancher.io/' target='_blank' className='flex py-2 gap-2 hover:ml-2 transition-all'>
                 <img width={20} height={20} src={FleetLogo.src} alt='' />
@@ -63,10 +62,6 @@ export const Header = () => {
               <a rel='nofollow noreferrer' href='https://harvesterhci.io/' target='_blank' className='flex py-2 gap-2 hover:ml-2 transition-all'>
                 <img width={16} height={16} src={HarvesterLogo.src} alt='' />
                 Harvester
-              </a>
-              <a rel='nofollow noreferrer' href='https://opni.io/' target='_blank' className='flex py-2 gap-2 hover:ml-2 transition-all'>
-                <img width={16} height={16} src={OpniLogo.src} alt='' />
-                Opni
               </a>
 
               <hr className='mt-2 mb-2 border-gray-400 border-opacity-20' />
