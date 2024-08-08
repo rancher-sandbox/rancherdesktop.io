@@ -4,8 +4,10 @@ import { PREFIX } from '@/utils/constants'
 
 
 export const DownloadButtons = () => {
-    // Use 1.10.0 as the fallback version in case something goes wrong fetching the latest release tag name
-    const [latestRelease, setLatestRelease] = useState('1.10.0');
+    const [latestRelease, setLatestRelease] = useState(undefined);
+    // If something goes wrong fetching the latest release tag name via the API then
+    // fall back to the GitHub releases page
+    const fallBackURL = 'https://github.com/rancher-sandbox/rancher-desktop/releases';
     const owner = 'rancher-sandbox';
     const repo = 'rancher-desktop';
 
@@ -26,7 +28,7 @@ export const DownloadButtons = () => {
             <div className="col-span-1">
                 <img src={`${PREFIX}/images/logo-apple.svg`} className="w-8 h-8 mx-auto block" alt="apple" />
                 <p className="mt-2">
-                  <a href={`https://github.com/rancher-sandbox/rancher-desktop/releases/download/v${latestRelease}/Rancher.Desktop-${latestRelease}.aarch64.dmg`}>
+                  <a href={latestRelease ? `https://github.com/rancher-sandbox/rancher-desktop/releases/download/v${latestRelease}/Rancher.Desktop-${latestRelease}.aarch64.dmg` : fallBackURL}>
                     Download for macOS (Apple Silicon) <span className="material-icons"></span>
                   </a>
                 </p>
@@ -34,7 +36,7 @@ export const DownloadButtons = () => {
             <div className="col-span-1">
                 <img src={`${PREFIX}/images/logo-apple.svg`} className="w-8 h-8 mx-auto block" alt="apple" />
                 <p className="mt-2">
-                  <a href={`https://github.com/rancher-sandbox/rancher-desktop/releases/download/v${latestRelease}/Rancher.Desktop-${latestRelease}.x86_64.dmg`}>
+                  <a href={latestRelease ? `https://github.com/rancher-sandbox/rancher-desktop/releases/download/v${latestRelease}/Rancher.Desktop-${latestRelease}.x86_64.dmg` : fallBackURL}>
                     Download for macOS (Intel) <span className="material-icons"></span>
                   </a>
                 </p>
@@ -42,7 +44,7 @@ export const DownloadButtons = () => {
             <div className="col-span-1">
                 <img src={`${PREFIX}/images/logo-windows.svg`} className="w-8 h-8 mx-auto block" alt="Windows" />
                 <p className="mt-2">
-                  <a href={`https://github.com/rancher-sandbox/rancher-desktop/releases/download/v${latestRelease}/Rancher.Desktop.Setup.${latestRelease}.msi`}>
+                  <a href={latestRelease ? `https://github.com/rancher-sandbox/rancher-desktop/releases/download/v${latestRelease}/Rancher.Desktop.Setup.${latestRelease}.msi` : fallBackURL}>
                     Download for Windows (x64) <span className="material-icons"></span>
                   </a>
                 </p>
