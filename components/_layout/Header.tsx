@@ -1,5 +1,5 @@
 import { RancherLogoSVG } from '@/assets/images'
-import ElementalLogo from '@/assets/products-logos/icon-elemental.png'
+import ElementalLogo from '@/assets/products-logos/icon-elemental.svg'
 import HarvesterLogo from '@/assets/products-logos/icon-harvester.svg'
 import FleetLogo from '@/assets/products-logos/icon-fleet.svg'
 import useStore, { ThemeI } from '@/store/main.store'
