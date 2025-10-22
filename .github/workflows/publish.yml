@@ -2,7 +2,10 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
 
 jobs:
   build:
@@ -42,6 +45,8 @@ jobs:
         with:
           path: ./out
   deploy:
+    # Do not deploy in the official repo unless this is being pushed to main.
+    if: ${{ github.repository != 'rancher-sandbox/rancherdesktop.io' || (github.event_name == 'push' && github.ref == 'refs/heads/main') }}
     needs: build
     runs-on: ubuntu-latest
     permissions:
