@@ -2,6 +2,9 @@
   "name": "nextwind",
   "version": "0.1.0",
   "author": "en3sis",
+  "engines": {
+    "node": "^16"
+  },
   "scripts": {
     "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
