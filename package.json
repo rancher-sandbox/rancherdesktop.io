@@ -29,7 +29,7 @@
     "@types/react": "^17.0.18",
     "@typescript-eslint/eslint-plugin": "^4.31.2",
     "@typescript-eslint/parser": "^4.31.2",
-    "autoprefixer": "^10.3.1",
+    "autoprefixer": "^10.4.21",
     "cross-env": "^7.0.3",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.0",
