@@ -9,7 +9,7 @@ export const Footer = () => {
             <DocAndGitLinks />
           </div>
 
-          <p className='text-[12px] text-center md:text-left'>© 2023 SUSE. Rancher Desktop is an open source project of the SUSE Rancher Engineering group.</p>
+          <p className='text-[12px] text-center md:text-left'>© 2025 SUSE. Rancher Desktop is an open source project of the SUSE Rancher Engineering group.</p>
           {/* <SuseLogoSVG className='w-40 h-20 fill-current text-white' /> */}
         </div>
       </div>
