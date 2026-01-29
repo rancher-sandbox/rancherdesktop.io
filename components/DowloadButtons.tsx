@@ -26,7 +26,9 @@ export const DownloadButtons = () => {
     return(
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
             <div className="col-span-1">
-                <img src={`${PREFIX}/images/logo-apple.svg`} className="w-8 h-8 mx-auto block" alt="apple" />
+                <a href={latestRelease ? `https://github.com/rancher-sandbox/rancher-desktop/releases/download/v${latestRelease}/Rancher.Desktop-${latestRelease}.aarch64.dmg` : fallBackURL}>
+                  <img src={`${PREFIX}/images/logo-apple.svg`} className="w-8 h-8 mx-auto block" alt="apple" />
+                </a>
                 <p className="mt-2">
                   <a href={latestRelease ? `https://github.com/rancher-sandbox/rancher-desktop/releases/download/v${latestRelease}/Rancher.Desktop-${latestRelease}.aarch64.dmg` : fallBackURL}>
                     Download for macOS (Apple Silicon) <span className="material-icons"></span>
@@ -34,7 +36,9 @@ export const DownloadButtons = () => {
                 </p>
             </div>
             <div className="col-span-1">
-                <img src={`${PREFIX}/images/logo-apple.svg`} className="w-8 h-8 mx-auto block" alt="apple" />
+                <a href={latestRelease ? `https://github.com/rancher-sandbox/rancher-desktop/releases/download/v${latestRelease}/Rancher.Desktop-${latestRelease}.x86_64.dmg` : fallBackURL}>
+                  <img src={`${PREFIX}/images/logo-apple.svg`} className="w-8 h-8 mx-auto block" alt="apple" />
+                </a>
                 <p className="mt-2">
                   <a href={latestRelease ? `https://github.com/rancher-sandbox/rancher-desktop/releases/download/v${latestRelease}/Rancher.Desktop-${latestRelease}.x86_64.dmg` : fallBackURL}>
                     Download for macOS (Intel) <span className="material-icons"></span>
@@ -42,7 +46,9 @@ export const DownloadButtons = () => {
                 </p>
             </div>
             <div className="col-span-1">
-                <img src={`${PREFIX}/images/logo-windows.svg`} className="w-8 h-8 mx-auto block" alt="Windows" />
+                <a href={latestRelease ? `https://github.com/rancher-sandbox/rancher-desktop/releases/download/v${latestRelease}/Rancher.Desktop.Setup.${latestRelease}.msi` : fallBackURL}>
+                  <img src={`${PREFIX}/images/logo-windows.svg`} className="w-8 h-8 mx-auto block" alt="Windows" />
+                </a>
                 <p className="mt-2">
                   <a href={latestRelease ? `https://github.com/rancher-sandbox/rancher-desktop/releases/download/v${latestRelease}/Rancher.Desktop.Setup.${latestRelease}.msi` : fallBackURL}>
                     Download for Windows (x64) <span className="material-icons"></span>
@@ -50,7 +56,9 @@ export const DownloadButtons = () => {
                 </p>
             </div>
             <div className="col-span-1">
-                <img src={`${PREFIX}/images/logo-linux.svg`} className="w-8 h-8 mx-auto block" alt="linux" />
+                <a href="https://docs.rancherdesktop.io/getting-started/installation#linux">
+                  <img src={`${PREFIX}/images/logo-linux.svg`} className="w-8 h-8 mx-auto block" alt="linux" />
+                </a>
                 <p className="mt-2">
                   <a href="https://docs.rancherdesktop.io/getting-started/installation#linux">
                     Install on Linux <span className="material-icons"></span>
